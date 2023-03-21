@@ -1,0 +1,258 @@
+
+body {
+	padding:0;
+    margin:0;
+    font-family: helvetica;
+    overflow-y:hidden;
+    overflow-x:hidden;
+    color:white;
+}
+
+#game {
+	display:flex;
+}
+
+#debris {
+	position:fixed;
+    z-index: 10;
+}
+
+
+#Cookie {
+    margin-top: 35%;
+    text-align:center;
+}
+
+@keyframes Clicked {
+    0% {transform: scale(1.05);}
+    50% {transform: scale(1.1);}
+    100% {transform: scale(1.05);}
+}
+
+@keyframes ClickEffect {
+    
+}
+
+@keyframes Fade {
+    0% {filter: opacity(100%); }
+    50% {filter: opacity(100%) ; }
+    100% {filter: opacity(0%) ;}
+}
+
+@keyframes FadeIn {
+    0% {filter: opacity(0%);}
+    100% {filter: opacity(100%);}
+}
+
+@keyframes Notification {
+    0% {filter:opacity(0%);}
+    20% {filter:opacity(100%);}
+    80% {filter:opacity(100%);}
+    100% {filter:opacity(0%);}
+}
+
+.Border {
+	/*vbackground-image: url("https://orteil.dashnet.org/cookieclicker/img/panelVertical.png?v=2");*/    background-color:rgb(180,180,180);
+   color:rgb(180,180,180);
+   border-color: rgb(140,140,140);
+   border-style:solid;
+   border-width:2px;
+    
+}
+
+.StoreItem {
+	width:100%;
+    color:white;
+    display:flex;
+    cursor:pointer;
+    background-color:rgba(180,180,180,1);
+    border-color:rgb(150,150,150);
+    border-style:solid;
+    border-bottom-width: 3px;
+}
+
+.button {
+	border-style: outset;
+    border-radius:2px;
+    font-size: medium;
+    border-color:gold;
+    background: rgb(2,0,36);
+background: linear-gradient(180deg, rgba(2,0,36,0.47222216523328087) 0%, rgba(0,0,0,0.948412641423757) 100%);
+    color:white;
+}
+
+.Frame {
+	text-align:center;  
+    	border-style: outset;
+    border-radius:2px;
+    font-size: medium;
+    border-color:gold;
+    background: rgb(2,0,36);
+background: linear-gradient(180deg, rgba(2,0,36,0.47222216523328087) 0%, rgba(0,0,0,0.948412641423757) 100%);
+    color:white;
+    box-shadow: inset 0px 0px 15px black;
+}
+
+.StoreIcon {    
+	width:48px;
+    height:48px;
+    margin-top:12.5%;
+}
+
+.popup {
+    position:fixed;
+	text-align:center;
+    color:white;
+    font-size: x-large;
+    text-shadow:0px 2px black;
+    animation-name: Fade;
+    animation-duration: 1s;
+    cursor:default;
+    -webkit-user-select: none; /* Safari */        
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* IE10+/Edge */
+}
+
+.ClickedAnimation {
+    animation-name: Clicked;
+    animation-duration: .30s;
+    animation-timing-function: ease-in-out;
+}
+
+.cookieImg {
+	width: 20vw;    
+    transition: .25s;
+}
+
+.cookieImg:hover {
+	transform: scale(1.05);
+    transition: .2s;
+}
+
+
+
+.menuBar {
+	width:100%;
+    height: 12.5%;
+    background-color:grey;
+    display:flex;
+    color:black;
+}
+
+.left,.right {
+	width:50%;    
+    font-size: large;
+    text-align:center;
+    margin:0;
+    padding:0;
+}
+
+.label {
+	width: 100%;
+    background-color:rgb(180,180,180);
+    border-radius:2px;
+    border-style:solid;
+    border-color: rgb(140,140,140);
+    filter: drop-shadow(0px 2px 1px black);
+    cursor:pointer;
+}
+
+.label:hover {
+	background-color:rgb(150,150,150);    
+}
+
+.label:active {
+    background-color:rgb(150,150,150);   
+}
+
+.menu {
+	display:flex;    
+    
+}
+
+.Partition {
+	height:100vh;	    
+    text-align:center;
+}
+
+.text-box {
+	background: linear-gradient(to right, rgba(0,0,0,.5),rgba(0,0,0,1),rgba(0,0,0,.5));
+    color: white;
+}
+
+.text-box2 {
+	background: rgba(15,15,15,.5);
+	color: white;  
+}
+
+.CookiePartition {
+    
+    background: rgb(2,0,36);
+    color:white;
+    box-shadow: inset 0px 0px 5px black;  
+    width: 30%;
+    
+    background-color: #d8d388;
+opacity: 0.8;
+background-image: radial-gradient(#b37747 0.65px, #d8d388 0.65px);
+background-size: 13px 13px;
+}
+
+.SettingsPartition {
+	width: 68%;
+ background-color: #353567;
+opacity: 0.8;
+background-image: radial-gradient(#8686ad 0.5px, #353567 0.5px);
+background-size: 10px 10px;
+}
+
+.AchievementPartition {
+	display:none;  
+    width: 68%;
+    background-color: #555560;
+opacity: 0.8;
+background-image: radial-gradient(#949497 0.5px, #555560 0.5px);
+background-size: 10px 10px;
+}
+
+.StorePartition {
+	background-color:skyblue;
+    width: 30%;
+    height: 87.5vh;
+}
+
+.tooltip {
+	position:fixed;
+    width: 400px;
+    height: 150px;
+    background-color:rgb(180,180,180);
+    border-style:solid;
+    border-width:3px;
+    border-color: rgb(140,140,140);
+    animation-name: FadeIn;
+    animation-duration: .25s;
+	text-align:center;
+}
+
+.notification {
+    text-align:center;
+	width: 40vw;   
+    height: 15vh;
+/*     margin-top: 84vh;
+    margin-left: 59vw; */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    background-color: rgb(180,180,180);
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(140,140,140);
+    animation-name: Notification;
+    animation-duration: 4s;
+}
+
+.RightPartition {
+	background-color:orange;    
+    width: 70%;
+}
